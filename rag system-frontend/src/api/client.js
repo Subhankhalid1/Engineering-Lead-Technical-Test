@@ -17,13 +17,9 @@ api.interceptors.response.use(
   }
 )
 
-// ── /ingest ──────────────────────────────────────────────────────────────────
-
-/** Ingest a raw text string */
 export const ingestText = (text, name = 'text-input') =>
   api.post('/ingest', { text, name }).then(r => r.data.data)
 
-/** Ingest a file (multipart) */
 export const ingestFile = (file) => {
   const form = new FormData()
   form.append('file', file)
@@ -32,21 +28,16 @@ export const ingestFile = (file) => {
   }).then(r => r.data.data)
 }
 
-/** List all ingested documents */
 export const listDocuments = () =>
   api.get('/ingest').then(r => r.data.data)
 
-/** Delete a document by ID */
 export const deleteDocument = (id) =>
   api.delete(`/ingest/${id}`).then(r => r.data)
 
-// ── /ask ─────────────────────────────────────────────────────────────────────
-
-/** Ask a question */
 export const askQuestion = (question, topK = 3) =>
   api.post('/ask', { question, topK }).then(r => r.data.data)
 
-// ── /health ──────────────────────────────────────────────────────────────────
+
 
 export const getHealth = () =>
   api.get('/health').then(r => r.data)
