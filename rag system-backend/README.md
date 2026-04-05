@@ -5,16 +5,6 @@ Upload documents, ask questions, get AI-powered answers grounded in your content
 
 ---
 
-## Table of Contents
-
-- [Architecture Overview](#architecture-overview)
-- [Project Structure](#project-structure)
-- [Quick Start](#quick-start)
-- [Environment Configuration](#environment-configuration)
-- [API Reference](#api-reference)
-- [Design Decisions](#design-decisions)
-
----
 
 ## Architecture Overview
 
@@ -178,20 +168,3 @@ Remove a document and all its chunks from the vector store.
 
 
 
-## Design Decisions
-
-### In-Memory Vector Store
-Chosen for zero-dependency simplicity. Cosine similarity is computed in nodejs.  
-For production: swap `models/vectorStore.js` for a FAISS, Pinecone, or pgvector adapter — the interface is identical.
-
-### Mock Embeddings
-The mock embedder uses TF-IDF-style hashing into 256-dim vectors. Cosine similarity still works correctly — useful tokens will cluster. For real semantic search, switch to `LLM_PROVIDER=openai`.
-
-### Sentence-Aware Chunking
-The chunker tries sentence boundaries before word boundaries before hard cuts, preserving semantic coherence within chunks.
-
-### Separation of Concerns
-- **Routes** 
-- **Services**
-- **Models** 
-- **Utils** 
