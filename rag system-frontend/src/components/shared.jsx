@@ -1,4 +1,3 @@
-// ── Spinner ───────────────────────────────────────────────────────────────────
 export function Spinner({ size = 'md' }) {
   const s = size === 'sm' ? 'w-4 h-4' : 'w-5 h-5'
   return (
@@ -9,7 +8,7 @@ export function Spinner({ size = 'md' }) {
   )
 }
 
-// ── Typing dots ───────────────────────────────────────────────────────────────
+
 export function TypingDots() {
   return (
     <span className="inline-flex items-center gap-1">
@@ -24,7 +23,7 @@ export function TypingDots() {
   )
 }
 
-// ── Score bar ─────────────────────────────────────────────────────────────────
+
 export function ScoreBar({ score }) {
   const pct = Math.round(score * 100)
   const color = score > 0.7 ? 'bg-green-500' : score > 0.4 ? 'bg-amber-400' : 'bg-ink-500'
@@ -38,7 +37,7 @@ export function ScoreBar({ score }) {
   )
 }
 
-// ── Empty state ───────────────────────────────────────────────────────────────
+
 export function Empty({ icon, title, subtitle }) {
   return (
     <div className="flex flex-col items-center justify-center py-16 gap-3 text-center">
@@ -49,7 +48,7 @@ export function Empty({ icon, title, subtitle }) {
   )
 }
 
-// ── Status pill ───────────────────────────────────────────────────────────────
+
 export function StatusPill({ status, provider }) {
   const ok = status === 'ok'
   return (
@@ -65,7 +64,7 @@ export function StatusPill({ status, provider }) {
   )
 }
 
-// ── Method badge ──────────────────────────────────────────────────────────────
+
 export function MethodBadge({ method }) {
   const colors = {
     GET:    'bg-green-500/15 text-green-400 border-green-500/30',

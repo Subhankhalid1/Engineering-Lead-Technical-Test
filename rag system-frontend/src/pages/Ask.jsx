@@ -80,7 +80,7 @@ export default function Ask() {
 
   return (
     <div className="flex flex-col h-screen">
-      {/* Header */}
+    
       <div className="px-6 py-4 glass-strong border-b border-ink-800 flex items-center justify-between flex-shrink-0">
         <div>
           <h1 className="font-display font-700 text-ink-100">Ask</h1>
@@ -105,7 +105,7 @@ export default function Ask() {
         </div>
       </div>
 
-      {/* Messages */}
+ 
       <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col gap-4">
         {noDocuments && (
           <div className="glass rounded-xl p-5 border-amber-400/20 text-center animate-fade-up">
@@ -152,7 +152,7 @@ export default function Ask() {
         <div ref={bottomRef} />
       </div>
 
-      {/* Input */}
+  
       <div className="px-6 py-4 glass-strong border-t border-ink-800 flex-shrink-0">
         <div className="flex gap-3 items-end">
           <textarea

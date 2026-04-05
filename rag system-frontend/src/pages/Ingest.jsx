@@ -50,7 +50,6 @@ export default function Ingest() {
         <p className="text-ink-400 text-sm">Add content to the vector store for retrieval.</p>
       </div>
 
-      {/* Tab switcher */}
       <div className="flex gap-1 mb-6 glass rounded-lg p-1 w-fit animate-fade-up">
         {['text', 'file'].map(t => (
           <button
@@ -67,7 +66,6 @@ export default function Ingest() {
         ))}
       </div>
 
-      {/* Success */}
       {success && (
         <div className="mb-5 glass rounded-xl p-4 border-green-500/30 animate-fade-up">
           <p className="text-green-400 font-display font-600 text-sm mb-2">Ingested successfully</p>
@@ -80,14 +78,13 @@ export default function Ingest() {
         </div>
       )}
 
-      {/* Error */}
+   
       {error && (
         <div className="mb-5 glass rounded-xl p-4 border-red-500/30 animate-fade-up">
           <p className="text-red-400 text-sm">{error}</p>
         </div>
       )}
 
-      {/* Text tab */}
       {tab === 'text' && (
         <div className="glass rounded-xl p-5 flex flex-col gap-4 animate-fade-up">
           <div>
@@ -125,7 +122,7 @@ export default function Ingest() {
         </div>
       )}
 
-      {/* File tab */}
+  
       {tab === 'file' && (
         <div className="glass rounded-xl p-5 flex flex-col gap-4 animate-fade-up">
           {/* Drop zone */}

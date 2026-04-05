@@ -14,14 +14,13 @@ function DocRow({ doc, onDelete }) {
 
   return (
     <div className="glass rounded-xl p-4 flex items-start gap-4 animate-fade-up group">
-      {/* Icon */}
+    
       <div className="w-9 h-9 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center flex-shrink-0">
         <span className="text-amber-400 font-mono text-xs">
           {doc.filename?.split('.').pop()?.toUpperCase() || 'TXT'}
         </span>
       </div>
 
-      {/* Info */}
       <div className="flex-1 min-w-0">
         <p className="font-display font-600 text-ink-200 text-sm truncate">{doc.filename}</p>
         <p className="font-mono text-xs text-ink-600 truncate mt-0.5">{doc.id}</p>
@@ -36,7 +35,6 @@ function DocRow({ doc, onDelete }) {
         </div>
       </div>
 
-      {/* Delete */}
       <button
         onClick={handleDelete}
         disabled={deleting}
@@ -59,7 +57,7 @@ export default function Documents() {
 
   return (
     <div className="p-8 max-w-3xl mx-auto">
-      {/* Header */}
+  
       <div className="flex items-center justify-between mb-8 animate-fade-up">
         <div>
           <h1 className="font-display text-2xl font-700 text-ink-100 mb-1">Documents</h1>
@@ -75,7 +73,7 @@ export default function Documents() {
         </button>
       </div>
 
-      {/* Stats bar */}
+   
       {stats && (
         <div className="flex gap-4 mb-6 animate-fade-up">
           {[
@@ -90,14 +88,13 @@ export default function Documents() {
         </div>
       )}
 
-      {/* Error */}
+   
       {error && (
         <div className="glass rounded-xl p-4 border-red-500/30 mb-5">
           <p className="text-red-400 text-sm">{error}</p>
         </div>
       )}
 
-      {/* List */}
       {loading && documents.length === 0 ? (
         <div className="flex justify-center py-20"><Spinner /></div>
       ) : documents.length === 0 ? (

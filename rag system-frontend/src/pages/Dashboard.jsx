@@ -39,7 +39,7 @@ export default function Dashboard() {
         </p>
       </div>
 
-      {/* Stats */}
+
       <div className="grid grid-cols-3 gap-4 mb-10">
         <StatCard
           label="Documents"
@@ -58,7 +58,6 @@ export default function Dashboard() {
         />
       </div>
 
-      {/* Pipeline */}
       <div className="glass rounded-xl p-6 mb-8 animate-fade-up" style={{ animationDelay: '0.1s' }}>
         <p className="text-xs font-mono text-ink-500 uppercase tracking-widest mb-5">
           RAG Pipeline
@@ -89,7 +88,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Quick actions */}
       <div className="grid grid-cols-2 gap-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
         <Link to="/ingest" className="glass rounded-xl p-5 hover:border-amber-400/30 transition-colors group">
           <div className="text-2xl mb-3 text-amber-400 group-hover:scale-110 transition-transform origin-left">⊕</div>
