@@ -8,7 +8,6 @@ import {
   getHealth,
 } from '../api/client'
 
-// ── Documents store ───────────────────────────────────────────────────────────
 export const useDocumentStore = create((set, get) => ({
   documents: [],
   stats: null,
@@ -68,7 +67,7 @@ export const useDocumentStore = create((set, get) => ({
   clearError: () => set({ error: null }),
 }))
 
-// ── Chat / Ask store ──────────────────────────────────────────────────────────
+
 export const useChatStore = create((set) => ({
   messages: [],       // { id, role:'user'|'assistant', content, sources?, error? }
   loading: false,
@@ -100,7 +99,7 @@ export const useChatStore = create((set) => ({
   clearChat: () => set({ messages: [] }),
 }))
 
-// ── Health store ──────────────────────────────────────────────────────────────
+
 export const useHealthStore = create((set) => ({
   status: null,  // null | 'ok' | 'error'
   provider: null,
